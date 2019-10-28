@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<!--
+    <ImageButton
+        android:id="@+id/waing_end_classroom_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:background="@null"
+        android:src="@drawable/img_connection_dialog_close" />
+  -->
+    <TextView
+        android:id="@+id/waring_end_classroom_txt_testname"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/waing_end_classroom_btn_close"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="老师已停止本次试卷，请提交试卷！"
+        android:textColor="@color/red_default"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/waring_end_classroom_btn_sure"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/waring_end_classroom_txt_testname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/select_btn_connectionclass_dialog"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

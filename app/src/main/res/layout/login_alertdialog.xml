@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+  
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/dialog_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="亲爱的"
+             android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/dialog_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dialog_tv1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/dialog_tv1"
+            android:layout_toRightOf="@+id/dialog_tv1"
+            android:text="游客"
+            android:textColor="#0033FF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dialog_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dialog_tv2"
+            android:layout_alignBottom="@+id/dialog_tv2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/dialog_tv2"
+            android:layout_toRightOf="@+id/dialog_tv2"
+            android:text="同学："
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/dialog_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_tv1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="为了更好的全面体验雅思互动学习课堂，"
+             android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/dialog_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_tv4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="请尽快注册登录，成为新东方正式成员。"
+             android:textColor="@color/gray"/>
+
+        <Button
+            android:id="@+id/dialog_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/dialog_tv5"
+            android:layout_alignRight="@+id/dialog_tv5"
+            android:layout_below="@+id/dialog_tv5"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/select_btn_connectionclass_dialog"
+            android:text="马上注册"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/dialog_tv4"
+            android:src="@drawable/img_connection_dialog_close" />
+
+    </RelativeLayout>
+</RelativeLayout>

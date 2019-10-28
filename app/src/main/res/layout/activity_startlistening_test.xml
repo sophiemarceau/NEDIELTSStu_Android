@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 听力        _listening -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title__listening"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="学习详情"
+            android:background="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/img_back_listening"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:src="@drawable/select_imgview_back"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/font_color" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/listener_correct_play_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/bg_color" />
+        <ImageView
+            android:id="@+id/listener_correct_start_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bofang" />
+
+        <SeekBar
+            android:id="@+id/seekbar1_self1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/listener_correct_start_img1"
+            android:max="100"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/thumb_bar" />
+
+        <TextView
+            android:id="@+id/timeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/listener_correct_start_img1"
+            android:layout_marginRight="14dp"
+            android:text="/00:00" />
+
+        <TextView
+            android:id="@+id/tv_lx_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listener_correct_start_img1"
+            android:layout_toLeftOf="@+id/timeall"
+            android:text="00:00" />
+                <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_lx_self"
+        android:layout_height="4dp"
+        android:background="@color/bg_color" />
+    </RelativeLayout>
+
+        
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+         <ListView
+        android:id="@+id/mlistview_connection_starttest"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@color/themegrey"
+        android:layout_weight="2" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/relative_connection_starttest"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5" >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <WebView
+        android:id="@+id/webview_connection_starttest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:text="Mail HTML this is a HTML."
+         />
+
+       <Button
+           android:id="@+id/btn_next_conn_starttest"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="下一题"
+           android:textColor="@color/white"
+           android:background="@drawable/select_btn_sure_conn_starttest" />
+            
+        </LinearLayout>
+       
+    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

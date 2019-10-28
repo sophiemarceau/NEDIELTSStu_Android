@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+                    android:layout_below="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:weightSum="3"
+               android:gravity="center"
+               android:layout_marginTop="1dp"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <ImageView
+                android:id="@+id/dot3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dot4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dot5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_day"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp" 
+            >
+
+            <ImageView
+                android:id="@+id/iv_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/textview_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="14"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/relative_day"
+            android:weightSum="3"
+            android:gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/dot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dot1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dot2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_point"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/themegrey"
+        />
+
+</LinearLayout>

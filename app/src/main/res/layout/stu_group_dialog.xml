@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_tishi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="雅思口语6.5分班    第2课"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_tishi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray"
+            android:text="课上分组练习分组结果：第三组（5）  共四组" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" >
+
+        <GridView
+            android:id="@+id/waring_gridview_choose_classes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3" >
+
+        </GridView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/waing_choose_classes_btn_sure"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_connection_class_dialog_defalut"
+        android:text="确定"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

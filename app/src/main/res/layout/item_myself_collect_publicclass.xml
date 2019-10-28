@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100sp" 
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageview_data_item_type"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_studyonline_default" 
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textview_data_item_title"
+                android:layout_width="fill_parent"
+                android:layout_height="0sp"
+                android:text="雅思口语全能7分VIP全程"
+                android:layout_weight="1"
+                android:gravity="bottom" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0sp" 
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3">
+                <TextView
+                    android:id="@+id/textview_data_item_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:text="30分钟"
+                    android:textColor="@color/describe_color"
+                    android:drawableLeft="@drawable/icon_time"
+                    android:drawablePadding="10dp" />
+
+                <TextView
+                    android:id="@+id/textview_data_item_browsenum"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="28次" 
+                    android:textColor="@color/describe_color"
+                    android:drawableLeft="@drawable/icon_looknum"
+                    android:drawablePadding="10dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_data_item_createtime"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="2015.06.25"
+                android:textColor="@color/describe_color"
+                android:gravity="top" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1sp"
+        android:background="@color/lightgrey"/>
+
+</LinearLayout>

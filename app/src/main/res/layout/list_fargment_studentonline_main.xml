@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <ListView
+        android:id="@+id/listview_studyonline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listview_studyonline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@null"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF" />
+
+    <RelativeLayout
+        android:id="@+id/studyOnLine_no_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/studyOnLine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_null_data"
+            android:text=""
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+</LinearLayout>

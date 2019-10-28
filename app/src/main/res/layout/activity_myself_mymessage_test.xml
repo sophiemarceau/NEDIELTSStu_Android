@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:library="http://schemas.android.com/apk/res/com.example.strudentlelts"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/imageView_mystu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/select_imgview_back" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/myself_mymessage"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/red_default" />
+
+    </RelativeLayout>
+
+    <me.com.demo.app.view.FastListView
+        android:id="@+id/listview_myself_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        library:dividerDrawalbe="#292929"
+        library:fastItemHeight="60dp"
+        library:fastSwipeWidth="200dp"
+        library:supportFresh="true"
+        library:supportSwipe="true"
+        library:support_load="true"
+        android:layout_marginTop="2dp" >
+    </me.com.demo.app.view.FastListView>
+    <RelativeLayout
+        android:id="@+id/studyOnLine_no_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/studyOnLine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_null_data"
+            android:text=""
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+</LinearLayout>

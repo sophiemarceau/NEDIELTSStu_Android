@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/waring_connection_txt_testname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginStart="0.5dp"
+        android:layout_marginLeft="0.5dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:layout_toEndOf="@+id/textView1"
+        android:ellipsize="end"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:text="课上10分钟预测考题"
+        android:textColor="@color/red_default"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/waring_connection_btn_sure"
+        android:layout_below="@+id/waring_connection_txt_calssname"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="26dp"
+        android:text="老师已将发题"
+        android:textColor="@color/describe_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/waring_connection_txt_calssname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="35dp"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:singleLine="true"
+        android:text="@string/name_waring"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/waring_connection_txt_testname"
+        android:layout_toRightOf="@+id/waring_connection_txt_testname"
+        android:text="," />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="现在开始答题吗 ?"
+        android:textColor="@color/describe_color"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/waring_connection_btn_sure"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/select_btn_connectionclass_dialog"
+        android:text="开始答题"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/waring_connection_txt_classnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/waring_connection_txt_calssname"
+        android:layout_alignBottom="@+id/waring_connection_txt_calssname"
+     	android:layout_marginLeft="240dp"
+        android:text="第2课"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/waing_connection_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/waring_connection_btn_sure"
+        android:background="@null"
+        android:src="@drawable/img_connection_dialog_close" />
+
+</RelativeLayout>

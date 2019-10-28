@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/txt_user_interact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="18dp"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_user_interact_class_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_user_interact_name"
+            android:layout_alignBottom="@+id/txt_user_interact_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/txt_user_interact_name"
+            android:text=""
+            android:textColor="#C0C0C0"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_user_interact_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_user_interact_text_time"
+            android:layout_alignBottom="@+id/txt_user_interact_text_time"
+            android:layout_alignRight="@+id/txt_user_interact_text_count"
+            android:layout_marginRight="14dp"
+            android:text=""
+            android:textColor="#acacac"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_user_interact_text_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_user_interact_class_count"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="26dp"
+            android:text="练习数量"
+            android:textColor="#acacac" />
+
+        <TextView
+            android:id="@+id/txt_user_interact_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_user_interact_name"
+            android:layout_below="@+id/txt_user_interact_name"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="#C0C0C0"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

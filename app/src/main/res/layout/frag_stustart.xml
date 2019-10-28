@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.example.strudentlelts"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.lelts.tool.RoundProgressBar
+                android:id="@+id/RoundProgressBar_class_choose"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android_custom:roundColor="#D1D1D1"
+                android_custom:roundProgressColor="#e84d60"
+                android_custom:roundWidth="5dip"
+                android_custom:textColor="#808080"
+                android_custom:textIsDisplayable="true"
+                android_custom:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RoundProgressBar_class_choose"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="课程"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.lelts.tool.RoundProgressBar
+                android:id="@+id/RoundProgressBar_task_choose"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android_custom:roundColor="#D1D1D1"
+                android_custom:roundProgressColor="#e84d60"
+                android_custom:roundWidth="5dip"
+                android_custom:textColor="#808080"
+                android_custom:textIsDisplayable="true"
+                android_custom:textSize="18sp" />
+            
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RoundProgressBar_task_choose"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="练习"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/up"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.lelts.tool.RoundProgressBar
+                android:id="@+id/RoundProgressBar_mokao_choose"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android_custom:roundColor="#D1D1D1"
+                android_custom:roundProgressColor="#e84d60"
+                android_custom:roundWidth="5dip"
+                android_custom:textColor="#808080"
+                android_custom:textIsDisplayable="true"
+                android_custom:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RoundProgressBar_mokao_choose"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="模考"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.lelts.tool.RoundProgressBar
+                android:id="@+id/RoundProgressBar_start_choose"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android_custom:roundColor="#D1D1D1"
+                android_custom:roundProgressColor="#e84d60"
+                android_custom:roundWidth="5dip"
+                android_custom:textColor="#808080"
+                android_custom:textIsDisplayable="true"
+                android_custom:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RoundProgressBar_start_choose"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="在线学习"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/vote_connection_txt_testname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginLeft="0.5dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="课上投票活动"
+        android:textColor="@color/red_default"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vote_connection_btn_sure"
+        android:layout_below="@+id/vote_connection_txt_calssname"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="25dp"
+        android:text="老师已发起"
+        android:textColor="@color/describe_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/vote_connection_txt_calssname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginTop="35dp"
+        android:ellipsize="end"
+        android:maxEms="7"
+        android:singleLine="true"
+        android:text="雅思口语6.5分班"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/vote_connection_btn_cancle"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/vote_connection_btn_sure"
+        android:layout_below="@+id/vote_connection_btn_sure"
+        android:layout_marginTop="10dp"
+        android:background="@color/describe_color"
+        android:text="弃权"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/vote_connection_btn_sure"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/vote_connection_txt_testname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/select_btn_connectionclass_dialog"
+        android:text="我要参与"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/vote_connection_txt_classnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:text="第2课"
+        android:layout_toRightOf="@id/vote_connection_txt_calssname"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/vote_connection_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/vote_connection_btn_sure"
+        android:background="@null"
+        android:src="@drawable/img_connection_dialog_close" />
+
+</RelativeLayout>

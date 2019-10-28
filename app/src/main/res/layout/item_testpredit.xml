@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60sp" 
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent" 
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" 
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textview_pre_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="05-28" 
+                    android:textSize="16dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textview_pre_year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="2015"
+                    android:textSize="10dp"
+                    android:gravity="right" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="60sp"
+            android:background="@color/line_divider"/>
+
+        <TextView
+            android:id="@+id/textview_pre_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015年雅思口语考试"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+        
+</LinearLayout>
+
+       
+
+</LinearLayout>

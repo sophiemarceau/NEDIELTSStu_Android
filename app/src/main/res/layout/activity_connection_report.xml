@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.example.strudentlelts"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="学习详情"
+            android:background="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/img_back_conncetion_report"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:src="@drawable/select_imgview_back" />
+
+        <TextView
+            android:id="@+id/txt_playback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:text="再做一次"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/font_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themegrey"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5" >
+
+                    <com.lelts.tool.RoundProgressBarforreport
+                        android:id="@+id/roundProgressBar3_trueorfalse"
+                        android:layout_width="89dip"
+                        android:layout_height="89dip"
+                        android:layout_centerInParent="true"
+                        android_custom:roundColor="#e84d60"
+                        android_custom:roundProgressColor="#e84d60"
+                        android_custom:roundWidth="3dip"
+                        android_custom:textIsDisplayable="false" />
+
+                    <com.lelts.tool.RoundProgressBarforreport
+                        android:id="@+id/roundProgressBar2_trueorfalse"
+                        android:layout_width="89dip"
+                        android:layout_height="89dip"
+                        android:layout_centerInParent="true"
+                        android_custom:roundColor="#D1D1D1"
+                        android_custom:roundProgressColor="#e84d60"
+                        android_custom:roundWidth="4dip"
+                        android_custom:textColor="#e84d60"
+                        android_custom:textSize="18sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正确率" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5" >
+
+                    <com.lelts.tool.RoundProgressBarforreport
+                        android:id="@+id/roundProgressBar3_complete"
+                        android:layout_width="89dip"
+                        android:layout_height="89dip"
+                        android:layout_centerInParent="true"
+                        android_custom:roundColor="#e84d60"
+                        android_custom:roundProgressColor="#e84d60"
+                        android_custom:roundWidth="3dip"
+                        android_custom:textIsDisplayable="false" />
+
+                    <com.lelts.tool.RoundProgressBarforreport
+                        android:id="@+id/roundProgressBar2_complete"
+                        android:layout_width="89dip"
+                        android:layout_height="89dip"
+                        android:layout_centerInParent="true"
+                        android_custom:roundColor="#D1D1D1"
+                        android_custom:roundProgressColor="#e84d60"
+                        android_custom:roundWidth="4dip"
+                        android_custom:textColor="#e84d60"
+                        android_custom:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txt_time_conncetion_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="05:30"
+                        android:textColor="@color/describe_color"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="计时器" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--
+            <com.lelts.tool.RoundProgressBar
+                android:id="@+id/roundProgressBar3_trueorfalse"
+                android:layout_width="89dip"
+                android:layout_height="89dip"
+                android:layout_above="@+id/textView1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="18dp"
+                android_custom:roundColor="#e84d60"
+                android_custom:roundProgressColor="#e84d60"
+                android_custom:roundWidth="5dip"
+                android_custom:textIsDisplayable="false" />
+		    <com.lelts.tool.RoundProgressBar
+		        android:id="@+id/roundProgressBar2_trueorfalse"
+		        android:layout_width="89dip"
+		        android:layout_height="89dip"
+		        android:layout_alignBottom="@+id/roundProgressBar3_trueorfalse"
+		        android:layout_alignLeft="@+id/roundProgressBar3_trueorfalse"
+		        android_custom:roundColor="#D1D1D1"
+		        android_custom:roundProgressColor="#e84d60"
+		        android_custom:roundWidth="5dip"
+		        android_custom:textColor="#e84d60"
+		        android_custom:textSize="18sp" />
+
+
+                      <TextView
+                          android:id="@+id/textView3"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignLeft="@+id/roundProgressBar3_complete"
+                          android:layout_below="@+id/roundProgressBar3_trueorfalse"
+                          android:layout_marginLeft="18dp"
+                          android:text="计时器" />
+
+                      <TextView
+                          android:id="@+id/textView1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentBottom="true"
+                          android:layout_alignRight="@+id/roundProgressBar3_trueorfalse"
+                          android:layout_marginBottom="17dp"
+                          android:layout_marginRight="17dp"
+                          android:text="正确率" />
+
+                      <TextView
+                          android:id="@+id/txt_time_conncetion_report"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignBottom="@+id/roundProgressBar3_complete"
+                          android:layout_alignLeft="@+id/textView3"
+                          android:layout_marginBottom="31dp"
+                          android:textSize="20sp"
+                          android:textColor="@color/describe_color"
+                          android:text="05:30" />
+
+                      <com.lelts.tool.RoundProgressBar
+                          android:id="@+id/roundProgressBar3_complete"
+                          android:layout_width="90dip"
+                          android:layout_height="90dip"
+                          android:layout_alignParentRight="true"
+                          android:layout_alignTop="@+id/roundProgressBar3_trueorfalse"
+                          android:layout_marginRight="58dp"
+                          android_custom:roundColor="#e84d60"
+                          android_custom:roundProgressColor="#e84d60"
+                          android_custom:roundWidth="5dip"
+                          android_custom:textIsDisplayable="false" />
+        -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ListView
+                android:id="@+id/listview_conncetion_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:listSelector="@android:color/transparent" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

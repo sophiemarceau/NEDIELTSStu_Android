@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/stu_task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="动态"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/stu_task_back_img"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:src="@drawable/select_imgview_back"
+             />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red_default" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+         >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray"
+            android:text="你的勤奋击败了全国" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="0"
+            android:textColor="@color/red_default"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_toRightOf="@+id/tv_score"
+            android:text="%" 
+            android:textColor="@color/red_default"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+             android:textColor="@color/gray"
+            android:text="的同学" />
+
+    </RelativeLayout>
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:background="@color/white"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center"
+	    >
+	    <TextView
+	        android:id="@+id/starttask_task_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务"
+             android:gravity="center"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/starttask_start_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习"
+            android:gravity="center"
+             android:textSize="15sp"
+             android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/starttask_mokao_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模考" 
+             android:gravity="center"
+             android:textSize="15sp"
+             android:layout_weight="1"/>
+	</LinearLayout>
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/starttask_cursor"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selected_bg" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:src="@drawable/tab_selected_bg"
+            android:visibility="invisible" />
+		<ImageView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:src="@drawable/tab_selected_bg"
+            android:visibility="invisible" />
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vP"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+	
+</LinearLayout>

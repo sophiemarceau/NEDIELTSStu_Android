@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp" >
+
+            <ImageView
+                android:id="@+id/imageViewback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_myself_headpart_background" />
+
+            <ImageButton
+                android:id="@+id/img_back_interact_stu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/select_imgview_back"
+                android:src="@drawable/select_imgview_back" />
+
+            <ImageView
+                android:id="@+id/interact_stu_photo"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/icon_myself_headpic" />
+
+            <TextView
+                android:id="@+id/interact_stu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interact_stu_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="詹姆斯.布朗特"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interact_stu_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/interact_stu_data_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="距离雅思考试还有"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/interact_stu_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/homepage_user_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/touxiang_quan2x" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/lightgrey"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="280dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/view_connection_xian" />
+
+                <EditText
+                    android:id="@+id/ed_user_interact_number"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/img_connection_class_yumao"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:hint="输入暗号"
+                    android:inputType="number" />
+
+                <View
+                    android:layout_width="280dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/view_connection_xian" />
+
+                <Button
+                    android:id="@+id/btn_user_interact_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/select_btn_connectionclass"
+                    android:gravity="center"
+                    android:text="同步到班"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/user_interact_firstclassroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="欢迎来到雅思互动课堂"
+                        android:textColor="@color/describe_color" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:text="输入老师发的同步密码"
+                        android:textColor="@color/red_default"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:text="和同学们一起课堂练习"
+                        android:textColor="@color/describe_color"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="还在等什么？"
+                        android:textColor="@color/describe_color"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="马上开始吧！"
+                        android:textColor="@color/describe_color"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/interact_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/stu_taskcontent_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="任务查看"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/stu_taskcontent_back_img"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/select_imgview_back"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            >
+
+
+            <TextView
+                android:id="@+id/stu_taskcontent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+               android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey" 
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gray"
+                android:text="时间:" />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview2"
+                android:layout_alignBottom="@+id/textview2"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview2"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="15dp"
+                android:text="类型:" />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview3"
+                android:layout_alignBottom="@+id/textview3"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview3"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gray"
+                android:text="班型:" />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_nature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview4"
+                android:layout_alignBottom="@+id/textview4"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview4"
+               />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gray"
+                android:text="题目数量:" />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview5"
+                android:layout_alignBottom="@+id/textview5"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview5"
+               />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gray"
+                android:text="课次:" />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_classid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview6"
+                android:layout_alignBottom="@+id/textview6"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview6"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/textview7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="15dp"
+                android:text="性质:"
+               />
+
+            <TextView
+                android:id="@+id/stu_taskcontent_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview7"
+                android:layout_alignBottom="@+id/textview7"
+                android:layout_marginLeft="21dp"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/textview7"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+     <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            
+            >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/tanhao" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="建议在web端或ipad端完成此任务" 
+        android:textColor="@color/red_default"/>
+
+	 </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+         android:background="@color/white" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="班级详情"
+            android:background="@color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_back_ClassRoom_conncetion"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:src="@drawable/select_imgview_back" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/font_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#e8e8e8" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp" >
+
+        <TextView
+            android:id="@+id/txt_num_student_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="17dp"
+            android:textColor="#4682B4" />
+
+        <ImageView
+            android:id="@+id/img_classroom_student_classroom"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icon_myself_headpic" />
+
+        <TextView
+            android:id="@+id/txt_teachername_student_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_classroom_student_classroom"
+            android:layout_alignLeft="@+id/txt_name_student_classroom"
+            
+             />
+
+        <TextView
+            android:id="@+id/txt_name_student_classroom"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_num_student_classroom"
+            android:layout_alignBottom="@+id/txt_num_student_classroom"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/txt_num_student_classroom"
+            android:textColor="#808080" />
+
+        <TextView
+            android:id="@+id/btn_classroom_student_classroom"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/icon_classroom_yuan"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_count_student_classroom"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_teachername_student_classroom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_classroom_student_classroom"
+            android:layout_below="@+id/txt_teachername_student_classroom"
+            android:lines="4"
+			android:ellipsize="end"
+            android:textColor="#808080" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#e8e8e8" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+         >
+
+        <TextView
+            android:id="@+id/txt_studentcount_student_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="学员列表()"
+            />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/describe_color"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/gridview_student_classroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="5" >
+        </GridView>
+    </RelativeLayout>
+
+</LinearLayout>

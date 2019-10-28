@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:descendantFocusability="blocksDescendants" >
+
+        <ImageView
+            android:id="@+id/task_num_icon"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ziliao_hong" />
+
+        <View
+            android:id="@+id/task_line_up"
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/task_renwuliebiao_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/task_num_icon"
+            android:layout_toRightOf="@+id/task_num_icon"
+            android:background="@color/lightgrey" />
+
+        <View
+            android:id="@+id/task_line_down"
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/task_renwuliebiao_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/task_num_icon"
+            android:background="@color/lightgrey" />
+
+        <ImageView
+            android:id="@+id/task_renwuliebiao_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:layout_toRightOf="@+id/task_num_icon"
+            android:src="@drawable/renwuliebiao_hong" />
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_line_up"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/gray"
+            android:layout_toRightOf="@+id/task_renwuliebiao_icon"
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:singleLine="true"
+            android:text="图书馆场口语练习" />
+    </RelativeLayout>
+
+</RelativeLayout>

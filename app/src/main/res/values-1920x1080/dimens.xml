@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_1920_horizontal_margin">16dip</dimen>
+    <dimen name="activity_1920_vertical_margin">16dip</dimen>
+    <dimen name="gallery_1920_weight_margin">450dip</dimen>
+    <dimen name="gallery_1920_height_margin">500dip</dimen>
+    <dimen name="gallery_1920_height_xmlvalues">95dip</dimen>
+    <dimen name="gallery_1920_weight_xmlvalues">65dip</dimen>
+    <dimen name="gallery_1920_height">250dip</dimen>
+    <dimen name="margin_1920_10">10dip</dimen>
+    <dimen name="margin_1920_65">65dip</dimen>
+    <dimen name="margin_1920_98">98dip</dimen>
+    <dimen name="margin_1920_90">90dip</dimen>
+   
+
+</resources>

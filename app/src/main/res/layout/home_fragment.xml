@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imageCoverFlow="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BBEEEE"
+    >
+
+   
+	<!-- <com.dolphinwang.imagecoverflow.CoverFlowView
+		android:id="@+id/home_coverflow"
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		android:layout_below="@+id/home_layout"
+		android:layout_marginTop="20dp"		
+		imageCoverFlow:coverflowGravity="center_vertical"
+		imageCoverFlow:coverflowLayoutMode="wrap_content"
+		imageCoverFlow:reflectionGap="20dp"
+		imageCoverFlow:reflectionHeight="30%"
+		imageCoverFlow:visibleImage="3">
+	</com.dolphinwang.imagecoverflow.CoverFlowView> -->
+	<ImageView
+	    android:id="@+id/home_interact_img"
+	    android:layout_width="50dp"
+	    android:layout_height="50dp"
+	    android:layout_below="@+id/gallery"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="5dp"
+	    android:src="@drawable/u50" />
+
+	<Gallery
+	    android:id="@+id/gallery"
+	    android:layout_width="fill_parent"
+	    android:layout_height="250dp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="19dp" />
+
+</RelativeLayout>

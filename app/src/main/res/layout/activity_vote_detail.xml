@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:background="@color/themegrey" >
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+         android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="投票内容"
+            android:background="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btn_back_ClassRoom_conncetion"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:src="@drawable/select_imgview_back" />
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/font_color" />
+    
+    
+    
+    <TextView
+        android:id="@+id/votedetails_txt_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="TextView" />
+    
+    <ListView 
+        android:id="@+id/listview_vote_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        ></ListView>
+    
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+         <Button
+            android:id="@+id/vote_btn_endvote"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="获取最新投票结果"
+            android:background="@drawable/select_btn_connectionclass"
+            android:textColor="@color/white" />
+        
+        
+    </RelativeLayout>
+
+    
+
+</LinearLayout>

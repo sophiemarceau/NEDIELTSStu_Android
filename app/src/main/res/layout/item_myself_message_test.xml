@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="@color/white">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginLeft="15dp" >
+
+        <TextView
+            android:id="@+id/textview_message_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="雅思互动学习平台2.0正式发布"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/textview_message_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="2015-04-15"
+            android:textColor="@color/describe_color"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="删除" 
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>

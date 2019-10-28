@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundProgressBar">  
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />  
+        <attr name="textSize" format="dimension" /> 
+        <attr name="max" format="integer"></attr> 
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable> 
+    
+     <declare-styleable name="FastListView">
+        <attr name="supportSwipe" format="boolean"></attr>
+        <attr name="supportFresh" format="boolean"></attr>
+        <attr name="support_load" format="boolean"></attr>
+        <attr name="fastItemHeight" format="dimension"></attr>
+        <attr name="dividerHeight" format="dimension"></attr>
+        <attr name="dividerDrawalbe" format="reference|color"></attr>
+        <attr name="fastSwipeWidth" format="dimension"></attr>
+    </declare-styleable>
+    
+</resources>

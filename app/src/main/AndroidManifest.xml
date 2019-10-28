@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.strudentlelts"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+
+    <!-- 【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <!-- 【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- sdcard中读写数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 闹钟的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.lelts.tool.ImageLoder"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 包名在这里 -->
+                <action android:name="com.example.strudentlelts.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.example.strudentlelts.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.strudentlelts.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!--
+        V1.3.0添加的service，负责下载通知的资源 
+        android:value="559f7ae667e58e3ddf002add"
+        android:value="944fb070e1ee340632f0d0bad22aac84"
+
+
+
+        -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="559f7ae667e58e3ddf002add" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="944fb070e1ee340632f0d0bad22aac84" >
+        </meta-data>
+
+        <activity
+            android:name="com.lels.main.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.GuidPageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.LoginActvity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.RegisterDocumentActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 投票 -->
+        <activity
+            android:name="com.lels.student.vote.activity.VoteDetailActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.vote.activity.VoteContentActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 课堂连接 -->
+        <activity
+            android:name="com.lels.student.connectionclass.activity.PlayBackTestActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="com.lels.student.connectionclass.activity.StartListeningTestActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="com.lels.student.connectionclass.activity.ConnetionStartTestActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.connectionclass.activity.ConnectionReportActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.connectionclass.activity.ConnectionSaveAnswerActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.connectionclass.activity.PrevidTestReportActvity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.StundentClassroom"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.ForgetPswActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.StudyPlanActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.MyselfRemindDeatilActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.StudyPlanAddPlanActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MySelfActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentTargetActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentTargetAlterTestTypeActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAboutUsActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAccountManagermentActivity"
+            android:label="@string/title_activity_forget"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation"  
+    			android:launchMode="singleTop"  
+   			 android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentCollectActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentMessageActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentMessageTestActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentTestReportActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation"  
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.StudyOnlineActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.StudyADVDetailActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.StudyADVDTEXTetailActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.StudyOnlineScreenClassActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.StudyOnlineScreenDataActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.main.fragment.User_interact_classActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified" >
+
+            <!-- android:windowSoftInputMode="adjustPan|stateHidden" -->
+        </activity>
+        <activity
+            android:name="com.lels.student.starttask.activity.StaetTaskActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAccountAlterNameActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAccountAlterPasswordActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAccountBindStudentNumActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentAccountAlterSignMarkActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.starttask.activity.Renwu_contentActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.testpredictions.activity.TestPredictionsActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.testpredictions.activity.TestPredictionsWebActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.ForgetPswThirdStepActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.ForgetPswSecondStepActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.RegisterSceondActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.main.activity.MyRegisterBindStudentNumActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.DataStudyDetailActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.DataPublicclassDetailActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.studyonline.DataPublicclassDetailTestActivity"
+            android:label="@string/title_activity_forget"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.starttask.activity.Renwu_zlcontentActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.lt.activity.LtActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.youke.activity.YkStaetTaskActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.starttask.activity.Renwu_doccontentActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lelts.student.myself.MystudentMessageDetailActivity"
+            android:label="@string/title_activity_forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册广播 -->
+        <receiver
+            android:name="com.lels.alarm.AlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <activity
+            android:name="com.lels.alarm.AlarmActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.chatroom.activity.ChatListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.lels.alarm.AlarmService"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.lels.main.activity.MainActivity" />
+            </intent-filter>
+        </service>
+
+        <!-- 聊天模块 -->
+        <activity
+            android:name="com.lels.student.chatroom.activity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.strudentlelts"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lels.student.chatroom.activity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.strudentlelts"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- begin imlib request -->
+
+        <activity
+            android:name="io.rong.voipkit.activity.CallSideActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="io.rong.imkit"
+                    android:pathPrefix="/VoIPCall"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.rong.voipkit.activity.CalledSideActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="io.rong.imkit"
+                    android:pathPrefix="/VoIPAccept"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="io.rong.push.PushService"
+            android:process="io.rong.push" >
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.push" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="io.rong.push.CommandService"
+            android:process="io.rong.push" >
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push" >
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <action android:name="io.rong.imlib.action.push.heartbeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="io.rong.imkit.tools.SelectPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.PreviewPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.RongWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.widget.provider.TakingPicturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc" >
+        </service>
+        <service android:name="io.rong.imlib.ReConnectService" />
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver" />
+        <receiver android:name="io.rong.imlib.ipc.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="p5tvi9dst30x4" />
+
+        <!-- 自己的c9kqb3rdk02sj end 雅思的p5tvi9dst30x4 -->
+
+        <activity
+            android:name="com.lels.student.chatroom.activity.ChatGroupActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.chatroom.activity.KickOffDialog"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.lels.student.chatroom.activity.ChatVisitorActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lels.student.chatroom.activity.ChatPhotoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+</manifest>

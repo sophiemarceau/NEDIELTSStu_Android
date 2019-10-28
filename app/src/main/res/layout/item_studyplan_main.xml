@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/greys"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/view_redline"
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:background="#ff0000"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/linear_studyplan_content"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/linear_studyplan_time"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textview_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textview_plan_class_num"
+                    android:text="雅思口语5.5班"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textview_plan_class_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="第二次课"
+                    android:textColor="@color/describe_color"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white" >
+				
+                <TextView
+                    android:id="@+id/textview_plan_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imageView1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="海淀中街六号洪城拓展大厦5层第一教室"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icon_address" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_studyplan_time"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/view_redline"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/textview_plan_starttime"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="09:00"
+                android:textColor="@color/describe_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/textview_plan_endtime"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="11:00"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/describe_color"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
